@@ -33,10 +33,11 @@ basic.pause(5000)
     pins.analogWritePin(ampel_liste[aNum]+0, 0)
 pins.analogWritePin(ampel_liste[aNum]+1, 0)
 pins.analogWritePin(ampel_liste[aNum]+2, 0)
+basic.pause(1000)
 }
-let ampel_nr = 0
 let ampel_liste: number[] = []
+let ampel_nr = 0
 ampel_liste = [100, 103, 106, 109, 112]
 basic.forever(function () {
-    eine_seite(4)
+    eine_seite(ampel_nr)
 })
